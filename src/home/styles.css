@@ -1,0 +1,78 @@
+/* styles.css */
+:root {
+    --bg-color-light: #fff;
+    --bg-color-dark: #333;
+    --text-color-light: #000;
+    --text-color-dark: #fff;
+  }
+  
+  .home {
+    width: 500px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  
+  .home.light {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+  }
+  .home.dark {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+  }
+  
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 34px;
+    border-radius: 5px;
+  }
+  
+  .toggle-switch__checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .toggle-switch__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 5px;
+    -webkit-transition: 0.4s ease all;
+    transition: 0.4s ease all;
+  }
+  
+  .toggle-switch__checkbox:checked + .toggle-switch__slider {
+    background-color: #2196f3;
+  }
+  
+  /* Optional styles for rounded corners, etc. */
+  .toggle-switch__slider:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 40px;
+    left: 2px;
+    bottom: 2px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-transition: transform 0.4s ease all;
+    transition: transform 0.4s ease all;
+  }
+  
+  .toggle-switch__checkbox:checked + .toggle-switch__slider:before {
+    -webkit-transform: translateX(37px);
+    transform: translateX(37px);
+  }
+  
